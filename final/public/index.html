@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client Data</title>
+</head>
+<body>
+    <div id="resultat">
+        <!-- Nous allons afficher un retour en jQuery au visiteur -->
+    </div>
+    <h1>Please fill data in the form below:</h1>
+    <form method="POST" action="/post-feedback">
+        <label>Cle : <input type="text" id="cle" name="cle" value="CLE-TEST-IOT" required ></label>
+        <br>
+        <label>ID : <input type="text" id="id" name="id" required></label>
+        <br>
+        <label>Message :<br><textarea id="message" name="message"></textarea></label>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <a href="/view-feedbacks">View feedbacks</a>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+     
+<!--Partie JQuery-->    
+<script>
+ 
+    $(document).ready(function(){
+     
+        $("#submit").click(function(e){
+            e.preventDefault();
+     
+            $.post(
+                'https://script.google.com/macros/s/AKfycby-TJmFFUFTfiNUbMoSIZx8LVtiskQ-bUt4xO6hmrU0XQpJS8IPUBow/exec', // Envoi vers API.
+                {
+                    cle : $("#cle").val(),  // Nous récupérons la valeur de nos input que l'on fait passer à l'API
+                    password : $("#id").val(),
+                    message : $("#message").val()
+                },
+     
+                function(data){
+     
+                    if(data == 'Success'){
+                         // Le membre est connecté. Ajoutons lui un message dans la page HTML.
+     
+                         $("#resultat").html("<p>Vous avez envoyée les fichiers par la methode post !</p>");
+                    }
+                    else{
+                         // Le membre n'a pas été connecté. (data vaut ici "failed")
+     
+                         $("#resultat").html("<p>Echec de l'envoi/p>");
+                    }
+             
+                },
+                'text'
+             );
+        });
+    });
+     
+    </script>
+</body>
+</html>
