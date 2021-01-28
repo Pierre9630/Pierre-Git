@@ -1,5 +1,5 @@
 "Cle" : {
-	"default":"CLE-TEST-IOT",
+	"default":"CLE-TEST-IOT"
 }
 	"donnees:"{
 		"id" {
