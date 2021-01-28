@@ -1,7 +1,7 @@
 # Pierre-Git
 Récapitulatif :
 
-Utilisation de formulaire récupéré précédemment sur pabbly.com. -> No pris en compte finalement
+Utilisation de formulaire récupéré précédemment sur pabbly.com. -> Non pris en compte finalement
 
 Structurer l’entrée des données en l’occurrence Cle, id  , message pour l’exemple.
 Recherche Google « ajax et formulaire »
