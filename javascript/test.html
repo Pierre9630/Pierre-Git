@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head> <meta charset="utf-8" />
+    <title>Un formulaire de connexion en AJAX</title></head>
+ 
+<body>
+    
+    <form name="myform" action="#" method="POST">
+        Username: <input type="text" id="user" name="username"/><br/>
+        Password: <input type="password" id="pass" name="password"/>
+        <input type="submit" id="login" value="Login"/>
+      </form>
+ 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        var user=$('#user').val(), pass=$('#pass').val();
+        $('login').bind('click', function() {
+          $.ajax('/my/url', {
+            type: 'POST',
+            contentType: 'text/json',
+            data: JSON.stringify({username:user, password:pass}),
+            complete: function() { /* Do something with the response. */ }
+          });
+          return false; // Prevent form submit.
+        });
+      </script>
+</body>
+</html>
