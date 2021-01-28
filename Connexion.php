@@ -4,7 +4,7 @@
  * 
  */
  
-$cle = "Sdzzdzd";
+$cle = "CLE-TEST-IOT";
 $id = "zdzdqzd";
 $message = "ffznd";
 
