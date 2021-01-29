@@ -1,4 +1,4 @@
-"Cle" : {
+{"Cle" : {
 	"default":"CLE-TEST-IOT"
 }
 	"donnees:"{
@@ -8,4 +8,5 @@
 		"message": {
 			"type":"text"
 		}
+	}
 }
