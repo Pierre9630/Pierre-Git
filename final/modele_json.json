@@ -1,12 +1,9 @@
-{"Cle" : {
-	"default":"CLE-TEST-IOT"
-},
-	"donnees:"{
-		"id": {
-			"type":"id"
-		},
-		"message": {
-			"type":"text"
-		}
-	}
+{
+  "cle": {
+    "default": "CLE-TEST-IOT"
+  },
+  "donnees": {
+    "id": "id",
+    "message": "text"
+  }
 }
